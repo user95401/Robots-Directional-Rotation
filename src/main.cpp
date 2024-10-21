@@ -11,7 +11,7 @@ class $modify(PlayerObjectExt, PlayerObject) {
 			if (SETTING(bool, "Use bird rotation")) m_isBird = true;
 			else m_isSwing = true;
 
-			PlayerObject::updateRotation(p0);
+			PlayerObject::updateRotation(p0 * SETTING(double, "Delta Multiplier"));
 
 			m_isSwing = org_isSwing;
 			m_isBird = org_isBird;

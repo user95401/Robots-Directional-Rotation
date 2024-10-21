@@ -8,7 +8,7 @@
 	},
 	"id": "user95401.robots_directional_rotation",
 	"name": "Robots Directional Rotation",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "user95401",
 	"description": "robot and spider rotation acts like swing (or ship)",
 	"tags": [ "gameplay", "offline", "enhancement", "customization" ],
@@ -23,6 +23,23 @@
 			"description": "instead of swing",
 			"type": "bool",
 			"default": false
+		},
+		"Delta Multiplier": {
+			"name": "Delta Multiplier",
+			"description": "effects rotation intensity\nf.e: set 0.2 to make it rotate more slowly",
+			"type": "float",
+			"default": 1,
+			"min": 0.0,
+			"max": 10.5,
+			"controls": {
+				"arrows": true,
+				"arrow-step": 0.01,
+				"big-arrows": true,
+				"big-arrow-step": 0.1,
+				"slider": true,
+				"slider-step": 0.01,
+				"input": true
+			}
 		}
 	}
 }
