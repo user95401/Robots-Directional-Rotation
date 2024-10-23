@@ -3,7 +3,7 @@
 #include <Geode/modify/PlayerObject.hpp>
 class $modify(PlayerObjectExt, PlayerObject) {
 	$override void updateRotation(float p0) {
-		if ((m_isRobot or m_isSpider) and !m_isOnGround) {
+		if ((m_isRobot or m_isSpider or SETTING(bool, "For all game modes")) and !(m_isOnGround and !SETTING(bool, "Don't care if is On Ground")) {
 
 			auto org_isSwing = m_isSwing;
 			auto org_isBird = m_isBird;
@@ -18,6 +18,6 @@ class $modify(PlayerObjectExt, PlayerObject) {
 
 			return;
 		};
-		PlayerObject::updateRotation(p0);
+		PlayerObject::updateRotation(p0 * SETTING(double, "Global Delta Multiplier"));
 	}
 };
