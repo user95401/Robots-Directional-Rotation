@@ -24,20 +24,49 @@
 			"type": "bool",
 			"default": false
 		},
+		"For all game modes": {
+			"name": "For all game modes",
+			"description": "yes, it's true. use swing rotation at any game mode",
+			"type": "bool",
+			"default": false
+		},
+		"Don't care if is On Ground": {
+			"name": "Don't care if is On Ground",
+			"description": "Don't care if is On Ground",
+			"type": "bool",
+			"default": false
+		},
 		"Delta Multiplier": {
 			"name": "Delta Multiplier",
 			"description": "effects rotation intensity\nf.e: set 0.2 to make it rotate more slowly",
 			"type": "float",
 			"default": 1,
 			"min": 0.0,
-			"max": 10.5,
+			"max": 10.0,
 			"controls": {
 				"arrows": true,
 				"arrow-step": 0.01,
-				"big-arrows": true,
+				"big-arrows": false,
 				"big-arrow-step": 0.1,
 				"slider": true,
-				"slider-step": 0.01,
+				"slider-step": 0.001,
+				"input": true
+			}
+		},
+		"Global Delta Multiplier": {
+			"name": "Global Delta Multiplier",
+			"description": "related to all other calls",
+			"type": "float",
+			"default": 1,
+			"min": 0.0,
+			"max": 10.0,
+			"controls": {
+				"arrows": true,
+				"arrow-step": 0.01,
+				"big-arrows": false,
+				"big-arrow-step": 0.1,
+				"slider": true,
+				"slider-step": 0.001,
 				"input": true
 			}
 		}
