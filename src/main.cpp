@@ -1,4 +1,5 @@
 #include <_main.hpp>
+#include <_updater.hpp>
 
 #include <Geode/modify/PlayerObject.hpp>
 class $modify(PlayerObjectExt, PlayerObject) {
