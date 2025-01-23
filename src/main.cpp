@@ -8,7 +8,7 @@ class $modify(PlayerObjectExt, PlayerObject) {
 		if ((m_isRobot or m_isSpider or SETTING(bool, "For all game modes")) and !(m_isOnGround and !SETTING(bool, "Don't care if is On Ground"))) {
 
 			auto wasSwing = m_isSwing;
-			auto wasisBird = m_isBird;
+			auto wasBird = m_isBird;
 
 			if (SETTING(bool, "Use bird rotation")) m_isBird = true;
 			else m_isSwing = true;
